@@ -3,11 +3,9 @@ import javax.swing.JOptionPane;
 public class App {
     public static void main(String[] args) throws Exception {
     
-        //Service serv = new Service();
-        //perguntarPet();
-        //perguntarDelivery();
-
-        Delivery dely = new Delivery();
+        Service serv = new Service();
+        perguntarPet();
+        perguntarDelivery();       
 
     }
 

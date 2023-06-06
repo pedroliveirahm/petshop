@@ -5,6 +5,7 @@ public class Service extends Cliente {
     private String servicoEscolhido;
     static String[] tipo_servico = {"Banho", "Tosa", "Banho e Tosa", "Exame", "Vacinação", "Hospedagem"};
 
+    // Construtor
     public Service() {
 
         servicoEscolhido = (String) JOptionPane.showInputDialog(null, "Escolha o tipo de serviço que você deseja adquirir para o seu PET:",
@@ -19,7 +20,7 @@ public class Service extends Cliente {
     }
 
     public void informacoesCliente() {
-        String mensagem = "Nome: " + getNome() + "\nEndereço: " + getEndereco() + "\nTelefone: " + getTelefone() + "\nServiço Escolhido: " + servicoEscolhido;
+        String mensagem = "Nome: " + getNome() + "\nEndereço: " + getNome() + "\nTelefone: " + getTelefone() + "\nServiço Escolhido: " + servicoEscolhido;
         JOptionPane.showMessageDialog(null, mensagem);
     }
 
@@ -27,7 +28,7 @@ public class Service extends Cliente {
         int resposta = JOptionPane.showConfirmDialog(null, "As informações estão corretas?", "Informações Cliente", JOptionPane.YES_NO_OPTION);
         if (resposta == JOptionPane.NO_OPTION) {
             JOptionPane.showMessageDialog(null, "Certo, então digite todas as suas informações novamente");
-            new Delivery();
+            new Service();
         }
     }
 }

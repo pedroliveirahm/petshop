@@ -1,13 +1,18 @@
 import javax.swing.JOptionPane;
 
 public class Cliente {
+    // Atributos
     private String nome, endereco;
     private String telefone;
 
+     // Construtor
     public Cliente() {
         boolean inputValido = false;
 
+        // Captação do nome 
+        // inputValido = false, logo !inputValido = true *Basicamente aqui quer dizer que se eu colocar um input (valor que se pede) ele vai prosseguir com o código 
         while (!inputValido) {
+            // Exception
             try {
                 setNome(JOptionPane.showInputDialog(null, "Bem vindo ao PETSHOP, qual o seu nome:"));
                 inputValido = true;
@@ -16,8 +21,9 @@ public class Cliente {
             }
         }
 
+        // Esse atributo inputValido = false serve apenas para parar o loop do while acima
         inputValido = false;
-
+        // Captação do Telefone
         while (!inputValido) {
             try {
                 setTelefone(JOptionPane.showInputDialog(null, "Certo, " + nome + ". Nos informe um número de telefone para contato:"));
@@ -28,7 +34,7 @@ public class Cliente {
         }
 
         inputValido = false;
-
+        // Captação do Endereço
         while (!inputValido) {
             try {
                 setEndereco(JOptionPane.showInputDialog(null, "Nós informe o seu endereço para serviço"));
